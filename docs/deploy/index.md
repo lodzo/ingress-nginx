@@ -293,6 +293,9 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
     See the [GKE documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters#add_firewall_rules) 
     on adding rules and the [Kubernetes issue](https://github.com/kubernetes/kubernetes/issues/79739) for more detail.
 
+!!! warning
+    Static IP: When using a previously reserved static ip in GKE, please note that it needs to be a regional IP since the forwarding rules won't work for global IP's. [#1281|https://github.com/kubernetes/ingress-nginx/issues/1281]
+
 Proxy-protocol is supported in GCE check the [Official Documentations on how to enable.](https://cloud.google.com/load-balancing/docs/tcp/setting-up-tcp#proxy-protocol)
 
 #### Azure
